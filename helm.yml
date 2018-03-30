@@ -7,4 +7,14 @@
   - name: Hello World!
     shell: echo "Hi! Tower is working."
   - name: Install helm chart
-    shell: echo {{ chart_name }}
+    helm:
+      host: all
+      chart:
+        name: "{{ chart_name }}"
+        version: "{{ version }}"
+        source:
+          type: repo
+          location: https://kubernetes-charts.storage.googleapis.com
+      state: installed
+      name: my-memcached
+      namespace: default
