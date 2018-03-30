@@ -10,8 +10,8 @@
   helm:
     host: all
     chart:
-      name: {{ chart_name }}
-      version: {{ version }}
+      name: "{{ chart_name }}"
+      version: "{{ version }}"
       source:
         type: repo
         location: https://kubernetes-charts.storage.googleapis.com
