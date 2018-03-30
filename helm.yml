@@ -8,7 +8,6 @@
     shell: echo "Hi! Tower is working."
   - name: Install helm chart
     helm:
-      host: all
       chart:
         name: "{{ chart_name }}"
         version: "{{ version }}"
