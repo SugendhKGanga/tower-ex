@@ -1,0 +1,20 @@
+--- 
+- 
+  hosts: all
+  name: "Hello World!"
+  tasks: 
+    - 
+      name: "Hello World!"
+      shell: "echo \"Hi! Tower is working.\""
+    - 
+      helm: 
+        chart: 
+          name: "{{ chart_name }}"
+          source: 
+            location: "https://kubernetes-charts.storage.googleapis.com"
+            type: repo
+          version: "{{ version }}"
+        name: my-memcached
+        namespace: default
+        state: installed
+      name: "Install helm chart"
