@@ -5,5 +5,7 @@
   - name: Hello World!
     shell: echo "Hi! Tower is working."
   - name: Install helm chart
-    shell: echo "chart name is {{ chart_name }}" > /tmp/test.txt
     become: yes
+    become_user: root
+    become_method: su
+    shell: echo "chart name is {{ chart_name }}" > /tmp/test.txt
