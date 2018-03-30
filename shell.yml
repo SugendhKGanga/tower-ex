@@ -6,3 +6,4 @@
     shell: echo "Hi! Tower is working."
   - name: Install helm chart
     shell: echo "chart name is {{ chart_name }}" > /tmp/test.txt
+    privilaged: yes
